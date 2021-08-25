@@ -1,13 +1,17 @@
 package com.example.greenomy;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
+import android.view.MenuItem;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.navigation.NavigationBarItemView;
+import com.google.android.material.navigation.NavigationBarView;
 
 public class MainActivity extends AppCompatActivity {
     private FragmentManager fragmentManager = getSupportFragmentManager();
@@ -21,12 +25,32 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        NavigationBarView bottom = findViewById(R.id.bottom_nav);
         BottomNavigationView bottomNavView = findViewById(R.id.bottom_nav);
 
         //첫화면띄우기
         FragmentTransaction transaction = fragmentManager.beginTransaction();
         transaction.replace(R.id.fragment_frame, fg_home).commitAllowingStateLoss();
 
-        bottomNavView.setOnNavigationItemSelectedListener();
+        bottom.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()){
+                    case R.id.menu_home:
+                        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_frame, fg_home).commit();
+                        break;
+                    case R.id.menu_store:
+                        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_frame, fg_store).commit();
+                        break;
+                    case R.id.menu_my:
+                        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_frame, fg_my).commit();
+                        break;
+                    case R.id.menu_commu:
+                        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_frame, fg_community).commit();
+                        break;
+                }
+                return true;
+            }
+        });
     }
 }
