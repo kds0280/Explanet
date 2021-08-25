@@ -14,6 +14,7 @@ import com.google.android.material.navigation.NavigationBarItemView;
 import com.google.android.material.navigation.NavigationBarView;
 
 public class MainActivity extends AppCompatActivity {
+    //네비게이션 생성하기 위한
     private FragmentManager fragmentManager = getSupportFragmentManager();
     private fragment_home fg_home = new fragment_home();
     private fragment_community fg_community = new fragment_community();
