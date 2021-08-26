@@ -1,12 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
 
-    <TextView
+    <RelativeLayout
+        android:layout_width="360dp"
+        android:layout_height="80dp"
+        android:background="#8cdaa7">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Greenomy"
+            android:textSize="40dp" />
+    </RelativeLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/commu_nav"
+        android:layout_width="360dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:background="@color/design_default_color_background"
+        android:backgroundTint="@color/design_default_color_background"
+        app:menu="@menu/community_menu">
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+
+    <FrameLayout
+        android:id="@+id/commu_fragment_frame"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="community"
-        android:textSize="50dp"></TextView>
-
+        android:layout_height="wrap_content" />
 </LinearLayout>
