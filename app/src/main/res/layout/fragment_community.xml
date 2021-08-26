@@ -11,8 +11,10 @@
         android:layout_width="360dp"
         android:layout_height="50dp"
         android:layout_centerHorizontal="true"
-        android:background="@color/design_default_color_background"
-        android:backgroundTint="@color/design_default_color_background"
+        android:background="@color/white"
+        app:itemTextColor="@color/bottom_nav_colors"
+        app:itemIconTint="@color/bottom_nav_colors"
+
         app:menu="@menu/community_menu">
     </com.google.android.material.bottomnavigation.BottomNavigationView>
 
