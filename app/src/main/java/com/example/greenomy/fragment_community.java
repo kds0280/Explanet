@@ -23,7 +23,6 @@ public class fragment_community extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_community, container, false);
-
         return view;
     }
 
@@ -36,7 +35,7 @@ public class fragment_community extends Fragment {
 
         FragmentTransaction transaction = fragmentManager.beginTransaction();
         transaction.replace(R.id.commu_fragment_frame, fg_photo).commitAllowingStateLoss();
-        //dkdkdk
+
         nav.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {

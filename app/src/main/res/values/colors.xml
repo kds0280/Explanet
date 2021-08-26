@@ -7,4 +7,8 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="textColorPrimary">#016437</color>
+    <color name="colorPrimary">#8cdaa7</color>
+
+    출처: https://mommoo.tistory.com/47 [개발자로 홀로 서기]
 </resources>
