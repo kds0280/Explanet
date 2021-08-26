@@ -14,8 +14,6 @@ import androidx.fragment.app.Fragment;
 
 public class fragment_home extends Fragment {
 
-    private ListView v_today_mission;
-
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
