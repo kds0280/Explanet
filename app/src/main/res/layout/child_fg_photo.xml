@@ -8,9 +8,9 @@
 
        <ImageView
            android:layout_width="match_parent"
-           android:layout_height="846dp"
+           android:layout_height="match_parent"
            android:scaleType="fitXY"
-           android:src="@mipmap/photo" />
+           android:src="@drawable/community1" />
    </LinearLayout>
 
 </ScrollView>
