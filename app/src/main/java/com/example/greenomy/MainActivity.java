@@ -27,7 +27,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         NavigationBarView bottom = findViewById(R.id.bottom_nav);
-        BottomNavigationView bottomNavView = findViewById(R.id.bottom_nav);
 
         //첫화면띄우기
         FragmentTransaction transaction = fragmentManager.beginTransaction();
