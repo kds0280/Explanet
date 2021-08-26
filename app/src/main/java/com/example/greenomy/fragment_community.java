@@ -36,7 +36,7 @@ public class fragment_community extends Fragment {
 
         FragmentTransaction transaction = fragmentManager.beginTransaction();
         transaction.replace(R.id.commu_fragment_frame, fg_photo).commitAllowingStateLoss();
-
+        //dkdkdk
         nav.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
